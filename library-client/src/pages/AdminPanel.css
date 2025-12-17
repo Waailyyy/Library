@@ -1,0 +1,285 @@
+
+/* Wrapper for the full-screen background */
+.admin-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #FFC3A0 0%, #FFAFBD 100%); /* Soft Coral */
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.admin-panel-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: var(--font-body);
+    /* Padding is handled by wrapper now */
+}
+
+.admin-panel-header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); /* Keep header dark for contrast */
+    color: white;
+    padding: 30px 40px;
+    border-radius: 20px; /* Slightly more rounded */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.admin-welcome h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.admin-welcome p {
+    margin: 5px 0 0 0;
+    opacity: 0.8;
+    font-size: 0.95rem;
+    color: #cbd5e1;
+}
+
+.btn-logout {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 10px 25px;
+    border-radius: 30px;
+}
+
+.btn-logout:hover {
+    background: rgba(255,255,255,0.2);
+    border-color: white;
+}
+
+/* Tabs */
+.admin-tabs {
+    display: flex;
+    gap: 10px;
+    padding: 0 5px;
+    margin-bottom: 25px;
+    overflow-x: auto;
+    /* Optional: Hide scrollbar for cleaner look */
+    scrollbar-width: none; 
+}
+.admin-tabs::-webkit-scrollbar { display: none; }
+
+.admin-tabs button {
+    background: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+    border: 1px solid white;
+    padding: 12px 25px;
+    font-size: 0.95rem;
+    color: #475569;
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+}
+
+.admin-tabs button:hover {
+    color: #0F172A;
+    background: white;
+    transform: translateY(-2px);
+}
+
+.admin-tabs button.active {
+    background-color: #0F172A; /* Dark active tab for contrast */
+    color: white;
+    border-color: #0F172A;
+    box-shadow: 0 8px 15px rgba(15, 23, 42, 0.2);
+}
+
+.admin-panel-content {
+    background-color: #FFFFFF; /* White card */
+    padding: 40px;
+    border-radius: 24px;
+    min-height: 500px;
+    border: 1px solid white;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1); /* Softer, larger shadow */
+}
+
+/* Controls */
+.filters-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    background: #F8FAFC;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #E2E8F0;
+}
+
+.sort-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #64748B;
+}
+
+.sort-control select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #CBD5E1;
+    font-size: 0.9rem;
+    color: #0F172A;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Tables */
+.admin-table-container {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #E2E8F0;
+    background: white;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.admin-table thead th {
+    text-align: left;
+    padding: 18px 20px;
+    background-color: #F1F5F9; /* Light Gray Header */
+    color: #475569; /* Slate 600 */
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #E2E8F0;
+}
+
+.admin-table tbody td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #E2E8F0;
+    color: #334155; /* Slate 700 */
+    vertical-align: middle;
+}
+
+.admin-table tbody tr:hover {
+    background-color: #F8FAFC;
+}
+
+.table-thumb {
+    width: 45px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 6px;
+    background-color: #E2E8F0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Actions */
+.btn-add {
+    background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+
+.btn-add:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(99, 102, 241, 0.4);
+}
+
+.table-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-edit-icon, .btn-delete-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.2s;
+    box-shadow: none;
+}
+
+.btn-edit-icon { color: #0EA5E9; background-color: #E0F2FE; } /* Sky Blue */
+.btn-edit-icon:hover { background-color: #0EA5E9; color: white; }
+
+.btn-delete-icon { color: #EF4444; background-color: #FEE2E2; } /* Red */
+.btn-delete-icon:hover { background-color: #EF4444; color: white; }
+
+/* Forms inside admin */
+.add-entity-form {
+    background-color: #F8FAFC;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    border: 1px dashed #CBD5E1;
+}
+
+.add-entity-form h3 {
+    color: #0F172A;
+    margin-top: 0;
+}
+
+.inline-form {
+    display: flex;
+    gap: 15px;
+}
+
+.inline-form input {
+    padding: 12px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    flex: 1;
+    background-color: white;
+    color: #0F172A;
+}
+
+.inline-form input:focus {
+    border-color: #6366F1;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.admin-form.stacked-form .form-group {
+    margin-bottom: 20px;
+}
+.admin-form.stacked-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #475569;
+    font-weight: 600;
+}
+.admin-form.stacked-form input {
+    width: 100%;
+    padding: 12px;
+    background-color: white;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    color: #0F172A;
+}
+
+/* Badge */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.status-badge.issued { background-color: #FEF9C3; color: #CA8A04; border: 1px solid #FDE047; }
+.status-badge.returned { background-color: #DCFCE7; color: #16A34A; border: 1px solid #86EFAC; }
+
+.fade-in { animation: fadeIn 0.4s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }

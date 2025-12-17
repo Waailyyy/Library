@@ -1,0 +1,128 @@
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 23, 42, 0.4); /* Dark overlay */
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.modal-content {
+    background: #FFFFFF;
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+    border: 1px solid #E2E8F0;
+    animation: scaleUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: #0F172A; /* Dark Slate Text */
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #E2E8F0;
+    padding-bottom: 20px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #0F172A;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #64748B;
+    box-shadow: none;
+    padding: 0;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #EF4444;
+    background: none;
+    transform: rotate(90deg);
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #64748B;
+    font-size: 0.9rem;
+}
+
+.form-group input, .form-group select {
+    padding: 12px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #F8FAFC;
+    color: #0F172A; /* Ensure input text is dark */
+    transition: all 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    outline: none;
+    background-color: white;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.form-actions .btn-primary {
+    background: var(--accent-gradient);
+    padding: 12px 30px;
+    font-size: 1rem;
+    color: white;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.form-actions .btn-primary:hover {
+    background: var(--accent-gradient-hover);
+}
+
+.form-actions .btn-secondary {
+    background: transparent;
+    color: #64748B;
+    border: 1px solid #CBD5E1;
+    box-shadow: none;
+}
+
+.form-actions .btn-secondary:hover {
+    color: #0F172A;
+    border-color: #0F172A;
+}

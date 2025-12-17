@@ -1,0 +1,102 @@
+
+:root {
+  /* Palette: Modern Clean Light */
+  --bg-color: #F8FAFC;        /* Light Slate / White-ish */
+  --card-bg: #FFFFFF;         /* Pure White for cards */
+  
+  --primary-dark: #0F172A;    /* Dark Slate for main headings (High Contrast) */
+  --primary-light: #64748B;   /* Slate 500 for secondary text */
+  
+  /* Buttons & Main Actions (Indigo to Violet Gradient) */
+  --accent: #6366F1;          /* Indigo */
+  --accent-hover: #4F46E5;
+  --accent-gradient: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+  --accent-gradient-hover: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+  
+  /* Badges */
+  --badge-bg: rgba(99, 102, 241, 0.1);
+  --badge-text: #4F46E5;
+  --badge-border: rgba(99, 102, 241, 0.2);
+
+  /* Links */
+  --link-color: #0EA5E9;      /* Sky Blue */
+  
+  --border-color: #E2E8F0;    /* Light Gray borders */
+  --input-bg: #F1F5F9;        /* Light Gray for inputs */
+  
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light;        /* Tell browser we are in light mode */
+  color: var(--primary-dark);
+  background-color: var(--bg-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  /* Subtle mesh gradient for background interest, but very light */
+  background-image: radial-gradient(circle at 50% 0%, #EEF2FF 0%, #F8FAFC 100%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--primary-dark);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+button {
+  border-radius: 10px;
+  border: none;
+  padding: 0.8em 1.6em;
+  font-size: 0.95em;
+  font-weight: 600;
+  font-family: var(--font-body);
+  background: var(--accent-gradient);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+button:hover {
+  background: var(--accent-gradient-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+}
+
+button:disabled {
+  background: #CBD5E1;
+  color: #64748B;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+a:hover {
+  color: #0284C7;
+  text-decoration: underline;
+}
+
+input, select, textarea {
+  font-family: var(--font-body);
+}
